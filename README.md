@@ -1,14 +1,14 @@
-# Repository Q&A Agent
+# EIP Docs Agent
 
-An AI-powered question-answering system that creates a knowledge base from any GitHub repository's documentation. Built with **PydanticAI**, **Streamlit**, and **minsearch** for intelligent retrieval-augmented generation (RAG).
+An AI-powered question-answering system for Ethereum Improvement Proposals (EIPs). Creates a searchable knowledge base from the EIPs repository and answers questions using RAG (Retrieval-Augmented Generation). Built with **PydanticAI**, **Streamlit**, and **minsearch**.
 
 ```
-     ____                   ___    ___       _                    _
-    |  _ \ ___ _ __   ___  / _ \  / _ \     / \   __ _  ___ _ __ | |_
-    | |_) / _ \ '_ \ / _ \| | | |/ /_\ \   / _ \ / _` |/ _ \ '_ \| __|
-    |  _ <  __/ |_) | (_) | |_| / ___  |  / ___ \ (_| |  __/ | | | |_
-    |_| \_\___| .__/ \___/ \__\_\_/   \_\/_/   \_\__, |\___|_| |_|\__|
-              |_|                                |___/
+    _____ ___ ____    ____                      _                    _
+   | ____|_ _|  _ \  |  _ \  ___   ___ ___     / \   __ _  ___ _ __ | |_
+   |  _|  | || |_) | | | | |/ _ \ / __/ __|   / _ \ / _` |/ _ \ '_ \| __|
+   | |___ | ||  __/  | |_| | (_) | (__\__ \  / ___ \ (_| |  __/ | | | |_
+   |_____|___|_|     |____/ \___/ \___|___/ /_/   \_\__, |\___|_| |_|\__|
+                                                    |___/
 ```
 
 ## Table of Contents
@@ -45,7 +45,7 @@ An AI-powered question-answering system that creates a knowledge base from any G
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────┐
-│                           REPO Q&A AGENT SYSTEM                              │
+│                           EIP DOCS AGENT SYSTEM                              │
 ├─────────────────────────────────────────────────────────────────────────────┤
 │                                                                              │
 │   ┌──────────────┐                                                          │
