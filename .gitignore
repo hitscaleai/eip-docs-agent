@@ -1,0 +1,22 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Secrets and API keys
+secrets.toml
+.streamlit/secrets.toml
+
+# Jupyter notebooks
+*.ipynb
+.ipynb_checkpoints/
+
+# Log files (keep directory structure with .gitkeep)
+logs/*.json
+app/logs/*.json

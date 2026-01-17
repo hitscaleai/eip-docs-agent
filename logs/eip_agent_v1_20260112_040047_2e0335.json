@@ -1,0 +1,163 @@
+{
+  "agent_name": "eip_agent_v1",
+  "system_prompt": "['You are an assistant for the ethereum/EIPs repository.\\n\\nRules:\\n- Always call search_eips before answering.\\n- Answer using ONLY the retrieved chunks.\\n- If the retrieved chunks are insufficient, say what is missing and ask one focused follow-up question.\\n- Always end with:\\n\\nSources:\\n* [EIP] Section Title \u2014 URL\\n\\nInclude only sources you actually used.']",
+  "model": "gpt-4o-mini",
+  "tools": [
+    "search_eips"
+  ],
+  "messages": [
+    {
+      "parts": [
+        {
+          "content": "How does the EIP process handle status changes?",
+          "timestamp": "2026-01-12T04:00:40.996056+00:00",
+          "part_kind": "user-prompt"
+        }
+      ],
+      "timestamp": "2026-01-12T04:00:40.996291+00:00",
+      "instructions": "You are an assistant for the ethereum/EIPs repository.\n\nRules:\n- Always call search_eips before answering.\n- Answer using ONLY the retrieved chunks.\n- If the retrieved chunks are insufficient, say what is missing and ask one focused follow-up question.\n- Always end with:\n\nSources:\n* [EIP] Section Title \u2014 URL\n\nInclude only sources you actually used.",
+      "kind": "request",
+      "run_id": "622153b0-41e6-4eed-83a0-59766631ba08",
+      "metadata": null
+    },
+    {
+      "parts": [
+        {
+          "tool_name": "search_eips",
+          "args": "{\"query\":\"EIP process status changes\"}",
+          "tool_call_id": "call_rzM0XrkQL7vAlPfwOprupOMH",
+          "id": null,
+          "provider_details": null,
+          "part_kind": "tool-call"
+        }
+      ],
+      "usage": {
+        "input_tokens": 146,
+        "cache_write_tokens": 0,
+        "cache_read_tokens": 0,
+        "output_tokens": 19,
+        "input_audio_tokens": 0,
+        "cache_audio_read_tokens": 0,
+        "output_audio_tokens": 0,
+        "details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "model_name": "gpt-4o-mini-2024-07-18",
+      "timestamp": "2026-01-12T04:00:41.707024+00:00",
+      "kind": "response",
+      "provider_name": "openai",
+      "provider_url": "https://api.openai.com/v1/",
+      "provider_details": {
+        "finish_reason": "tool_calls",
+        "timestamp": "2026-01-12T04:00:41+00:00"
+      },
+      "provider_response_id": "chatcmpl-Cx3ObPKWCDK1JICgnRbMxlJTDXjZz",
+      "finish_reason": "tool_call",
+      "run_id": "622153b0-41e6-4eed-83a0-59766631ba08",
+      "metadata": null
+    },
+    {
+      "parts": [
+        {
+          "tool_name": "search_eips",
+          "content": [
+            {
+              "eip": 1,
+              "path": "EIPS/eip-1.md",
+              "section_title": "## EIP Work Flow",
+              "url": "https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1.md",
+              "chunk": "cribed below, shepherd the discussions in the appropriate forums, and build community consensus around the idea.*\n\n### EIP Process\n\nThe following is the standardization process for all EIPs in all tracks:\n\n![EIP Status Diagram](../assets/eip-1/EIP-process-update.jpg)\n\n**Idea** - An idea that is pre-draft. This is not tracked within the EIP Repository.\n\n**Draft** - The first formally tracked stage of an EIP in development. An EIP is merged by an EIP Editor into the EIP repository when properly formatted.\n\n**Review** - An EIP Author marks an EIP as ready for and requesting Peer Review.\n\n**Last Call** - This is the final review window for an EIP before it is moved to `Final`. An EIP enters `Last Call` when the specification is stable and the author opens a PR with a review end date (`last-call-deadline`), typically 14 days later. \n\nIf this period results in necessary normative changes it will revert the EIP to `Review`.\n\n**Final** - This EIP represents the final standard. A Final EIP exists in a state of finality and should only be updated to correct errata and add non-normative clarifications.\n\nA PR moving an EIP from Last Call to Final SHOULD contain no changes other than the status update. Any content or editorial proposed change SHOULD be separate from this status-updating PR and committed prior to it.\n\n**Stagnant** - Any EIP in `Draft` or `Review` or `Last Call` if inactive for a period of 6 months or greater is moved to `Stagnant`. An EIP may be resurrected from this state by Authors or EIP Editors through moving it back to `Draft` or its earlier status. If not resurrected, a proposal may stay forever in this status.\n\n>*EIP Authors are notified of any algorithmic change to the status of their EIP*\n\n**Withdrawn** - The EIP Author(s) have withdrawn the proposed EIP. This state has finality and can no longer be resurrected using this EIP number. If the idea is pursued at later date it is considered a new proposal.\n\n**Living** - A special status for EIPs that are des"
+            },
+            {
+              "eip": 1,
+              "path": "EIPS/eip-1.md",
+              "section_title": "## EIP Rationale",
+              "url": "https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1.md",
+              "chunk": "## EIP Rationale\n\nWe intend EIPs to be the primary mechanisms for proposing new features, for collecting community technical input on an issue, and for documenting the design decisions that have gone into Ethereum. Because the EIPs are maintained as text files in a versioned repository, their revision history is the historical record of the feature proposal.\n\nFor Ethereum implementers, EIPs are a convenient way to track the progress of their implementation. Ideally each implementation maintainer would list the EIPs that they have implemented. This will give end users a convenient way to know the current status of a given implementation or library."
+            },
+            {
+              "eip": 1,
+              "path": "EIPS/eip-1.md",
+              "section_title": "## EIP Types",
+              "url": "https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1.md",
+              "chunk": "ts around language-level standards like method names ([EIP-6](./eip-6.md)) and [contract ABIs](https://docs.soliditylang.org/en/develop/abi-spec.html).\n  - **ERC**: application-level standards and conventions, including contract standards such as token standards ([ERC-20](./eip-20.md)), name registries ([ERC-137](./eip-137.md)), URI schemes, library/package formats, and wallet formats.\n\n- A **Meta EIP** describes a process surrounding Ethereum or proposes a change to (or an event in) a process. Process EIPs are like Standards Track EIPs but apply to areas other than the Ethereum protocol itself. They may propose an implementation, but not to Ethereum's codebase; they often require community consensus; unlike Informational EIPs, they are more than recommendations, and users are typically not free to ignore them. Examples include procedures, guidelines, changes to the decision-making process, and changes to the tools or environment used in Ethereum development. Any meta-EIP is also considered a Process EIP.\n\n- An **Informational EIP** describes an Ethereum design issue, or provides general guidelines or information to the Ethereum community, but does not propose a new feature. Informational EIPs do not necessarily represent Ethereum community consensus or a recommendation, so users and implementers are free to ignore Informational EIPs or follow their advice.\n\nIt is highly recommended that a single EIP contain a single key proposal or new idea. The more focused the EIP, the more successful it tends to be. A change to one client doesn't require an EIP; a change that affects multiple clients, or defines a standard for multiple apps to use, does.\n\nAn EIP must meet certain minimum criteria. It must be a clear and complete description of the proposed enhancement. The enhancement must represent a net improvement. The proposed implementation, if applicable, must be solid and must not complicate the protocol unduly.\n\n### Special requirements for Core EIPs\n\nIf a **Core** EIP m"
+            },
+            {
+              "eip": 1,
+              "path": "EIPS/eip-1.md",
+              "section_title": "## EIP Header Preamble",
+              "url": "https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1.md",
+              "chunk": "## EIP Header Preamble\n\nEach EIP must begin with an [RFC 822](https://www.ietf.org/rfc/rfc822.txt) style header preamble, preceded and followed by three hyphens (`---`). This header is also termed [\"front matter\" by Jekyll](https://jekyllrb.com/docs/front-matter/). The headers must appear in the following order.\n\n`eip`: *EIP number*\n\n`title`: *The EIP title is a few words, not a complete sentence*\n\n`description`: *Description is one full (short) sentence*\n\n`author`: *The list of the author's or authors' name(s) and/or username(s), or name(s) and email(s). Details are below.*\n\n`discussions-to`: *The url pointing to the official discussion thread*\n\n`status`: *Draft, Review, Last Call, Final, Stagnant, Withdrawn, Living*\n\n`last-call-deadline`: *The date last call period ends on* (Optional field, only needed when status is `Last Call`)\n\n`type`: *One of `Standards Track`, `Meta`, or `Informational`*\n\n`category`: *One of `Core`, `Networking`, `Interface`, or `ERC`* (Optional field, only needed for `Standards Track` EIPs)\n\n`created`: *Date the EIP was created on*\n\n`requires`: *EIP number(s)* (Optional field)\n\n`withdrawal-reason`: *A sentence explaining why the EIP was withdrawn.* (Optional field, only needed when status is `Withdrawn`)\n\nHeaders that permit lists must separate elements with commas.\n\nHeaders requiring dates will always do so in the format of ISO 8601 (yyyy-mm-dd).\n\n### `author` header\n\nThe `author` header lists the names, email addresses or usernames of the authors/owners of the EIP. Those who prefer anonymity may use a username only, or a first name and a username. The format of the `author` header value must be:\n\n> Random J. User &lt;address@dom.ain&gt;\n\nor\n\n> Random J. User (@username)\n\nor\n\n> Random J. User (@username) &lt;address@dom.ain&gt;\n\nif the email address and/or GitHub username is included, and\n\n> Random J. User\n\nif neither the email address nor the GitHub username are given.\n\nAt least one author must use a GitHub username, in order to get notifi"
+            },
+            {
+              "eip": 1,
+              "path": "EIPS/eip-1.md",
+              "section_title": "## EIP Editor Responsibilities",
+              "url": "https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1.md",
+              "chunk": "## EIP Editor Responsibilities\n\nFor each new EIP that comes in, an editor does the following:\n\n- Read the EIP to check if it is ready: sound and complete. The ideas must make technical sense, even if they don't seem likely to get to final status.\n- The title should accurately describe the content.\n- Check the EIP for language (spelling, grammar, sentence structure, etc.), markup (GitHub flavored Markdown), code style\n\nIf the EIP isn't ready, the editor will send it back to the author for revision, with specific instructions.\n\nOnce the EIP is ready for the repository, the EIP editor will:\n\n- Assign an EIP number (generally incremental; editors can reassign if number sniping is suspected)\n- Merge the corresponding [pull request](https://github.com/ethereum/EIPs/pulls)\n- Send a message back to the EIP author with the next step.\n\nMany EIPs are written and maintained by developers with write access to the Ethereum codebase. The EIP editors monitor EIP changes, and correct any structure, grammar, spelling, or markup mistakes we see.\n\nThe editors don't pass judgment on EIPs. We merely do the administrative & editorial part."
+            },
+            {
+              "eip": 1,
+              "path": "EIPS/eip-1.md",
+              "section_title": "## EIP Editors",
+              "url": "https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1.md",
+              "chunk": "## EIP Editors\n\nThe current EIP editors are\n\n- Matt Garnett (@lightclient)\n- Sam Wilson (@SamWilsn)\n- Zainan Victor Zhou (@xinbenlv)\n- Gajinder Singh (@g11tech)\n- Jochem Brouwer (@jochem-brouwer)\n\nEmeritus EIP editors are\n\n- Alex Beregszaszi (@axic)\n- Casey Detrio (@cdetrio)\n- Gavin John (@Pandapip1)\n- Greg Colvin (@gcolvin)\n- Hudson Jameson (@Souptacular)\n- Martin Becze (@wanderer)\n- Micah Zoltu (@MicahZoltu)\n- Nick Johnson (@arachnid)\n- Nick Savers (@nicksavers)\n- Vitalik Buterin (@vbuterin)\n\nIf you would like to become an EIP editor, please check [EIP-5069](./eip-5069.md)."
+            }
+          ],
+          "tool_call_id": "call_rzM0XrkQL7vAlPfwOprupOMH",
+          "metadata": null,
+          "timestamp": "2026-01-12T04:00:41.796505+00:00",
+          "part_kind": "tool-return"
+        }
+      ],
+      "timestamp": "2026-01-12T04:00:41.796923+00:00",
+      "instructions": "You are an assistant for the ethereum/EIPs repository.\n\nRules:\n- Always call search_eips before answering.\n- Answer using ONLY the retrieved chunks.\n- If the retrieved chunks are insufficient, say what is missing and ask one focused follow-up question.\n- Always end with:\n\nSources:\n* [EIP] Section Title \u2014 URL\n\nInclude only sources you actually used.",
+      "kind": "request",
+      "run_id": "622153b0-41e6-4eed-83a0-59766631ba08",
+      "metadata": null
+    },
+    {
+      "parts": [
+        {
+          "content": "The EIP process handles status changes through a defined workflow for each EIP. The statuses include:\n\n1. **Idea**: Not tracked within the EIP Repository.\n2. **Draft**: The first formal stage where the EIP is merged into the repository.\n3. **Review**: The author marks the EIP as ready for peer review.\n4. **Last Call**: A final review window before moving to 'Final'; a specified period (typically 14 days) is set for this phase.\n5. **Final**: Represents the established standard, which may only be updated for errata or clarifications.\n6. **Stagnant**: An EIP that remains inactive for 6 months and may be resurrected back to an earlier status.\n7. **Withdrawn**: Indicates that the authors have removed the proposal with no possibility of resurrection.\n8. **Living**: A special status for EIPs that are designed to evolve over time.\n\nEIP authors are notified of any algorithmic changes to the status of their EIP. \n\nFor more details on the workflow and statuses, you can refer to the linked EIP document.\n\nSources:\n* [EIP Work Flow \u2014 EIP-1](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1.md)",
+          "id": null,
+          "provider_details": null,
+          "part_kind": "text"
+        }
+      ],
+      "usage": {
+        "input_tokens": 2546,
+        "cache_write_tokens": 0,
+        "cache_read_tokens": 0,
+        "output_tokens": 268,
+        "input_audio_tokens": 0,
+        "cache_audio_read_tokens": 0,
+        "output_audio_tokens": 0,
+        "details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "model_name": "gpt-4o-mini-2024-07-18",
+      "timestamp": "2026-01-12T04:00:47.337906+00:00",
+      "kind": "response",
+      "provider_name": "openai",
+      "provider_url": "https://api.openai.com/v1/",
+      "provider_details": {
+        "finish_reason": "stop",
+        "timestamp": "2026-01-12T04:00:42+00:00"
+      },
+      "provider_response_id": "chatcmpl-Cx3OcIzY7ql1yByxAW5Kxrbi3k8NE",
+      "finish_reason": "stop",
+      "run_id": "622153b0-41e6-4eed-83a0-59766631ba08",
+      "metadata": null
+    }
+  ],
+  "source": "user"
+}
