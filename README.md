@@ -43,16 +43,12 @@ An AI-powered question-answering system for Ethereum Improvement Proposals (EIPs
 
 ## Demo
 
-### Video Demo
-
-<!-- Add your demo video here -->
-<!-- [![Demo Video](https://img.youtube.com/vi/VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=VIDEO_ID) -->
-
-*Coming soon: Demo video showing the agent in action*
+🎥 **Demo video:** [Watch the demo](https://github.com/hitscaleai/eip-specs-agent/releases/download/v0.1.0/eip_specs_agent_release_demo.mov)
 
 ### Screenshots
 
-<!-- Add screenshots of the Streamlit UI here -->
+<img width="768" height="593" alt="Screenshot 2026-01-18 at 10 46 23 PM" src="https://github.com/user-attachments/assets/77f66309-0641-4736-80fd-1aa55d475b65" />
+
 
 | Chat Interface | Search Results |
 |----------------|----------------|
